@@ -1,6 +1,6 @@
 # Dotfiles
 
-This directory contains my dotfiles for macOS.
+These are my dotfiles (for zsh, neovim, etc.)!
 
 ## Requirements
 
@@ -12,7 +12,7 @@ brew install stow
 
 ## Installation
 
-First, clone the repository using git.
+First, clone the repository.
 
 ```
 git clone git@github.com:csirianni/dotfiles.git
@@ -25,6 +25,6 @@ cd dotfiles
 stow --target=$HOME .
 ```
 
-This creates symlinks in the $HOME directory.
+This creates symlinks in the `$HOME` directory.
 
 > The `--target=$HOME` argument is only necessary if the `dotfiles` directory is located somewhere other than your $HOME directory.
