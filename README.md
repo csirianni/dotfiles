@@ -1,6 +1,6 @@
 # Dotfiles
 
-These are my dotfiles (for zsh, neovim, etc.)!
+These are my dotfiles for macOS!
 
 ## Requirements
 
@@ -13,10 +13,6 @@ brew install stow
 ## Installation
 
 First, clone the repository.
-
-```
-git clone git@github.com:csirianni/dotfiles.git
-```
 
 Then, run `stow`.
 
