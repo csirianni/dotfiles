@@ -1,14 +1,14 @@
 theme = Sonokai
 
-font-family = "BerkeleyMono Nerd Font Mono Plus Font Awesome Plus Font Awesome Extension Plus Octicons Plus Power Symbols Plus Codicons Plus Pomicons Plus Font Logos Plus Material Design Icons Plus Weather Icons"
+font-family = "Berkeley Mono"
 font-size = 16
 font-synthetic-style = false
 
-window-decoration = false
+macos-titlebar-style = hidden
 window-padding-x = 7
-window-padding-y = 0
+window-padding-y = 7
 window-width = 133
-window-height = 43
+window-height = 42
 
 cursor-style = "block"
 cursor-style-blink = false
