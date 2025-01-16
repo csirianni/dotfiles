@@ -106,12 +106,11 @@ alias myfuse='sshfs csiriann@ssh.cs.brown.edu:/gpfs/main/home/csiriann ~/browncs
 
 alias fixfuse='diskutil unmount force ~/browncs && myfuse' 
 
-# Git Aliases
+# Aliases
 alias gs='git status'
 alias gl='git log'
 
 alias vim='nvim'
 
-# Path Aliases
-alias cs300='cd /Users/cedric/Programming/CSCI-0300/ta/DEV-ENVIRONMENT/home'
-alias cs1680='cd /Users/cedric/Programming/CSCI-1680/DEV-ENVIRONMENT && ./run-container'
+alias cs300='cd /Users/cedric/Programming/0300/ta/DEV-ENVIRONMENT/ && ./cs300-run-docker'
+alias cs1680='cd /Users/cedric/Programming/1680/DEV-ENVIRONMENT && ./run-container'
