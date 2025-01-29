@@ -109,6 +109,7 @@ alias fixfuse='diskutil unmount force ~/browncs && myfuse'
 # Aliases
 alias gs='git status'
 alias gl='git log'
+alias gb='git branch'
 
 alias vim='nvim'
 
