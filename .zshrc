@@ -115,3 +115,4 @@ alias vim='nvim'
 
 alias cs300='cd /Users/cedric/Programming/0300/TA/2025/DEV-ENVIRONMENT/ && ./cs300-run-docker'
 alias cs1680='cd /Users/cedric/Programming/1680/DEV-ENVIRONMENT && ./run-container'
+alias cs1420='cd /Users/cedric/Programming/1420/ && source .venv/bin/activate'
