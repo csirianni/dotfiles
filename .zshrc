@@ -116,3 +116,14 @@ alias vim='nvim'
 alias cs300='cd /Users/cedric/Programming/0300/TA/2025/DEV-ENVIRONMENT/ && ./cs300-run-docker'
 alias cs1680='cd /Users/cedric/Programming/1680/DEV-ENVIRONMENT && ./run-container'
 alias cs1420='cd /Users/cedric/Programming/1420/ && source .venv/bin/activate'
+
+# yazi shell wrapper that provides the ability to change the cwd when exiting Yazi
+# https://yazi-rs.github.io/docs/quick-start
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
