@@ -87,6 +87,7 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
+export EDITOR='nvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -112,6 +113,7 @@ alias gl='git log'
 alias gb='git branch'
 
 alias vim='nvim'
+alias e='nvim'
 
 alias cs300='cd /Users/cedric/Programming/0300/TA/2025/DEV-ENVIRONMENT/ && ./cs300-run-docker'
 alias cs1680='cd /Users/cedric/Programming/1680/DEV-ENVIRONMENT && ./run-container'
