@@ -101,12 +101,6 @@ export EDITOR='nvim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Brown CS Remote Mount
-# Instructions: https://docs.google.com/document/d/1QMgbCEEKDnsVgMhX90ZmLSi68JsaU3lr3Oyt39zRWcI/edit
-alias myfuse='sshfs csiriann@ssh.cs.brown.edu:/gpfs/main/home/csiriann ~/browncs && cd ~/browncs'
-
-alias fixfuse='diskutil unmount force ~/browncs && myfuse' 
-
 # Aliases
 alias gs='git status'
 alias gl='git log'
@@ -114,10 +108,6 @@ alias gb='git branch'
 
 alias vim='nvim'
 alias e='nvim'
-
-alias cs300='cd /Users/cedric/Programming/0300/TA/2025/DEV-ENVIRONMENT/ && ./cs300-run-docker'
-alias cs1680='cd /Users/cedric/Programming/1680/DEV-ENVIRONMENT && ./run-container'
-alias cs1420='cd /Users/cedric/Programming/1420/ && source .venv/bin/activate'
 
 # yazi shell wrapper that provides the ability to change the cwd when exiting Yazi
 # https://yazi-rs.github.io/docs/quick-start
