@@ -1,5 +1,25 @@
+# BEGIN LC_ALL=C
+export LC_ALL="C"
+# END LC_ALL=C
+# BEGIN ANSIBLE MANAGED BLOCK
+export LC_ALL=C.UTF-8
+export LANG=C.UTF-8
+# END ANSIBLE MANAGED BLOCK
+# BEGIN ULIMITS BLOCK
+ulimit -v unlimited
+ulimit -n 64000
+ulimit -u 64000
+ulimit -l 256000
+# END ULIMITS BLOCK
+# BEGIN ULIMITS BLOCK WT
+ulimit -c unlimited
+# END ULIMITS BLOCK WT
+
+# Created by `pipx` on 2025-08-26 16:06:02
+export PATH="$PATH:/home/ubuntu/.local/bin"
+
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -109,13 +129,15 @@ alias gb='git branch'
 alias vim='nvim'
 alias e='nvim'
 
-# yazi shell wrapper that provides the ability to change the cwd when exiting Yazi
-# https://yazi-rs.github.io/docs/quick-start
-function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}
+ # yazi shell wrapper that provides the ability to change the cwd when exiting Yazi
+ # https://yazi-rs.github.io/docs/quick-start
+ function y() {
+ 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+ 		yazi "$@" --cwd-file="$tmp"
+ 			if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+ 					builtin cd -- "$cwd"
+ 						fi
+ 							rm -f -- "$tmp"
+ 							}
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
