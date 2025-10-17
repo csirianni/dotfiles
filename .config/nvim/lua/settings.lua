@@ -37,7 +37,7 @@ vim.opt.scrolloff = 10
 vim.opt.signcolumn = "yes"
 
 vim.opt.updatetime = 50
-
+vim.lsp.log.set_level = "off"
 -------------------------------------------------------------------------------
 --
 -- Autocommands
