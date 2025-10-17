@@ -22,6 +22,7 @@ vim.opt.wrap = true
 vim.opt.linebreak = true
 vim.opt.textwidth = 100
 vim.opt.wrapmargin = 0
+vim.opt.colorcolumn = "100"
 -- Set highlight on search, but clear on pressing <Esc> or <C-c> in normal mode
 vim.opt.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
