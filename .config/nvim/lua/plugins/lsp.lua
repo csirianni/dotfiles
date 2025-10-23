@@ -32,7 +32,6 @@ return {
             })
 
             lspconfig.clangd.setup({
-                cmd = { "/usr/bin/clangd-20" },
                 capabilities = capabilities,
             })
 
