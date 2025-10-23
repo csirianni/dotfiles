@@ -90,7 +90,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man-pages colorize zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git colored-man-pages colorize)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -142,3 +142,6 @@ alias e='nvim'
  							}
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
