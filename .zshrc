@@ -145,3 +145,11 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+function c() {
+    local TMUX_PATH="/home/linuxbrew/.linuxbrew/bin/tmux"
+    local CONTAINER_ID=${1:-"71283f29b40590a41346aee213c09b508682f9fb6d2c1754c5518bc870b2307"}
+    local WORKING_DIR="/home/cedric"
+
+    docker exec -it -w "${WORKING_DIR}" "${CONTAINER_ID}" /bin/zsh -i -c "${TMUX_PATH} new-session -A -s cedric"
+}
