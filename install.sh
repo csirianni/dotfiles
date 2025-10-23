@@ -64,7 +64,10 @@ install_brew () {
 install_packages () {
     echo "--- Installing packages ---"
 
-    brew install nvim tmux yazi zsh zsh-syntax-highlighting zsh-autosuggestions npm
+    brew install nvim tmux yazi zsh zsh-syntax-highlighting zsh-autosuggestions npm ripgrep
+
+    # LSP and formatters
+    brew install llvm clang-format prettier pyright ruff
     
     echo "Packages installed successfully."
 }
