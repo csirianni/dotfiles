@@ -8,7 +8,7 @@ export LANG=C.UTF-8
 # BEGIN ULIMITS BLOCK
 ulimit -v unlimited
 ulimit -n 64000
-ulimit -u 64000
+ulimit -u 12000
 ulimit -l 256000
 # END ULIMITS BLOCK
 # BEGIN ULIMITS BLOCK WT
