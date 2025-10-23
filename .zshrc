@@ -108,6 +108,7 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 export EDITOR='nvim'
+export TERM="xterm-256color"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
