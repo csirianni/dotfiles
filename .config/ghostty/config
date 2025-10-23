@@ -1,10 +1,10 @@
 theme = Sonokai
 
-font-family = "Berkeley Mono"
+font-family = "TX-02"
 font-size = 16
 font-synthetic-style = false
 
-macos-titlebar-style = hidden
+macos-titlebar-style = tabs
 window-padding-x = 7
 window-padding-y = 7
 window-width = 133
@@ -17,5 +17,3 @@ copy-on-select = clipboard
 
 shell-integration-features = no-cursor
 shell-integration = zsh
-
-command = /opt/homebrew/bin/zsh -l -c "tmux attach || tmux"
