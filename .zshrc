@@ -153,3 +153,5 @@ function c() {
 
     docker exec -it -w "${WORKING_DIR}" "${CONTAINER_ID}" /bin/zsh -i -c "${TMUX_PATH} new-session -A -s cedric"
 }
+
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519 2>/dev/null
