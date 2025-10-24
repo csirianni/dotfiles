@@ -31,8 +31,8 @@ vim.keymap.set("n", "<C-c>", "<cmd>nohlsearch<CR>")
 vim.opt.incsearch = true
 -- Enable 24-bit RGB color in the terminal for actual colors
 vim.opt.termguicolors = true
--- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
+-- Always keep cursor centered on screen
+vim.opt.scrolloff = 999
 
 vim.opt.signcolumn = "yes"
 
