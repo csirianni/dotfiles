@@ -68,6 +68,8 @@ install_packages () {
 
     # LSP and formatters
     brew install llvm clang-format prettier pyright ruff
+
+    brew install stow
     
     echo "Packages installed successfully."
 }
