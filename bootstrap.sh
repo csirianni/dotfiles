@@ -5,18 +5,17 @@ set -e
 echo "=== Dotfiles Bootstrap ==="
 echo ""
 
-# Check if Nix is already installed
-if [ -f ~/.nix-profile/etc/profile.d/nix.sh ]; then
-    echo "Nix already installed, sourcing profile..."
-    . ~/.nix-profile/etc/profile.d/nix.sh
-else
-    echo "Installing Nix..."
-    # Disable daemon to install Nix in single-user mode
+# Install Nix if it's not already available
+if ! command -v nix >/dev/null 2>&1; then
+    echo "Installing Nix (single-user)..."
     curl -L https://nixos.org/nix/install | sh -s -- --no-daemon
-    # Source the profile after installation
-    . ~/.nix-profile/etc/profile.d/nix.sh
 fi
-echo "Nix installed."
+echo "Nix is installed."
+
+# Source the Nix profile to have nix in PATH
+echo "Sourcing profile..."
+. ~/.nix-profile/etc/profile.d/nix.sh
+echo "Profile sourced."
 
 # Enable flakes
 echo "Enabling flakes..."
@@ -24,7 +23,6 @@ mkdir -p ~/.config/nix
 cat > ~/.config/nix/nix.conf <<EOF
 experimental-features = nix-command flakes
 EOF
-
 echo "Flakes enabled."
 
 echo ""
