@@ -29,5 +29,4 @@ echo ""
 echo "Installing Home Manager and applying configuration..."
 nix run home-manager/master -- switch --flake .
 
-echo ""
 echo "=== Setup Complete ==="
