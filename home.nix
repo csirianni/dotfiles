@@ -23,6 +23,8 @@
     nodePackages.prettier
     pyright
     ruff
+
+    just
   ];
 
   home.file = {
