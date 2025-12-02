@@ -157,3 +157,5 @@ function d() {
 }
 
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519 2>/dev/null
+
+if [ -e /home/cedric/.nix-profile/etc/profile.d/nix.sh ]; then . /home/cedric/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
