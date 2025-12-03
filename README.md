@@ -28,9 +28,9 @@ tmux new-session -s <session name>
 
 Optionally, you can attach to an existing session using the `-A` flag.
 
-## Install new packages
+## Reload
 
-To install new packages, simply append to the list in `home.nix` and run
+To reload the config, use the `just` command:
 
 ```sh
 just
