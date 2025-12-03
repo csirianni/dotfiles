@@ -29,8 +29,15 @@ return {
             vim.keymap.set("n", "<leader>fr", builtin.resume, { desc = "[F]ind [R]esume" })
             vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "[F]ind [B]uffers" })
             vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "[F]ind [H]elp" })
+            vim.keymap.set("n", "<leader>fe", function()
+                builtin.diagnostics({
+                    bufnr = 0,
+                    severity = vim.diagnostic.severity.ERROR
+                })
+            end, { desc = "[F]ind [E]rrors" })
             vim.keymap.set("n", "<leader>ft", ":TodoTelescope<CR>", {})
             vim.keymap.set("n", "<C-t>", builtin.treesitter, {})
+            vim.keymap.set("n", "gr", builtin.lsp_references, {})
 
             require("telescope").load_extension("ui-select")
         end,
