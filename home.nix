@@ -13,13 +13,12 @@
     tmux
     yazi
     zsh
-    zsh-syntax-highlighting
-    zsh-autosuggestions
     nodejs
     ripgrep
 
     llvm
     clang-tools
+    lua-language-server
     nodePackages.prettier
     pyright
     ruff
@@ -50,6 +49,8 @@
     envExtra = ''
       export EDITOR="nvim"
       export TERM="xterm-256color"
+      export LANG=en_US.UTF-8
+      export LC_ALL=en_US.UTF-8
     '';
 
     shellAliases = {
@@ -61,6 +62,11 @@
     };
 
     initContent = ''
+      # Source Nix
+      if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then
+        . ~/.nix-profile/etc/profile.d/nix.sh
+      fi
+
       # yazi function
       y() {
         local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
