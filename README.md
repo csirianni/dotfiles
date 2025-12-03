@@ -4,9 +4,7 @@ These are my dotfiles neovim, tmux, zsh, etc. on Linux.
 
 ## Installation
 
-First, clone the repository.
-
-Then, run the start script to install the required packages and load the config.
+Run the start script to install the required packages and load the config.
 
 ```
 cd dotfiles
@@ -15,23 +13,18 @@ cd dotfiles
 
 You may need to restart the terminal. 
 
-> Note: This script does not set the `$SHELL` variable. You must do this manually if you want to
-> switch from bash to zsh.
+> Note: The script does not change your default shell. If you want to switch from Bash to Zsh, 
+> you’ll need to update your shell manually.
 
-### Tmux
+## Making changes
 
-Start a `tmux` session with `zsh` through simply 
-
-```sh
-tmux new-session -s <session name>
-```
-
-Optionally, you can attach to an existing session using the `-A` flag.
-
-## Reload
-
-To reload the config, use the `just` command:
+If you modify the config, reload it via
 
 ```sh
 just
 ```
+
+### Adding new packages
+
+To install additional packages through Home Manager, append to the `home.packages` list in
+`home.nix`.
