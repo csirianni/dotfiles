@@ -13,16 +13,25 @@
     tmux
     yazi
     zsh
-    nodejs
     ripgrep
 
     llvm
+    gcc
     clang-tools
+
     lua-language-server
+
+    nodejs
     nodePackages.typescript-language-server
     nodePackages.prettier
+
     pyright
     ruff
+
+    rustc
+    cargo
+    rust-analyzer
+    rustfmt
 
     just
   ];

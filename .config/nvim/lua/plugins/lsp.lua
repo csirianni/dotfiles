@@ -45,29 +45,9 @@ return {
                 capabilities = capabilities,
             })
 
-            -- lspconfig.rust_analyzer.setup({
-            -- 	capabilities = capabilities,
-            -- 	settings = {
-            -- 		["rust-analyzer"] = {
-            -- 			cargo = {
-            -- 				features = "all",
-            -- 			},
-            -- 			imports = {
-            -- 				group = {
-            -- 					enable = false,
-            -- 				},
-            -- 			},
-            -- 			completion = {
-            -- 				postfix = {
-            -- 					enable = false,
-            -- 				},
-            -- 			},
-            -- 			diagnostics = {
-            -- 				enable = true,
-            -- 			},
-            -- 		},
-            -- 	},
-            -- })
+            lspconfig.rust_analyzer.setup({
+                capabilities = capabilities,
+            })
 
             -- Defer to pyright for hover
             -- https://docs.astral.sh/ruff/editors/setup/#neovim
