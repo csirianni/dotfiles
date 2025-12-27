@@ -43,6 +43,16 @@
     ".config/yazi".source = ./.config/yazi;
   };
 
+  programs.bash = {
+    enable = true;
+    initExtra = ''
+      # Auto-exec into zsh if available
+      if [ -x "$HOME/.nix-profile/bin/zsh" ]; then
+        exec "$HOME/.nix-profile/bin/zsh"
+      fi
+    '';
+  };
+
   programs.zsh = {
     enable = true;
     enableCompletion = true;
