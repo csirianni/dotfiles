@@ -28,3 +28,17 @@ just
 
 To install additional packages through Home Manager, append to the `home.packages` list in
 `home.nix`.
+
+## Debugging
+
+### nix: command not found
+
+If `nix` is not found in your path when running `./start.sh`, confirm that both `$HOME` and `$USER`
+are specified:
+
+```sh
+echo $HOME
+echo $USER
+```
+
+The `nix.sh` script run after installation requires that both environment variables are defined.
