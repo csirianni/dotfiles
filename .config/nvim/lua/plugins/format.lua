@@ -23,6 +23,11 @@ return {
                 lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
             }
         end,
+        formatters = {
+            ["clang-format"] = {
+                command = "/opt/mongodbtoolchain/v5/bin/clang-format"
+            }
+        },
         formatters_by_ft = {
             lua = { "stylua" },
             javascript = { "prettier" },

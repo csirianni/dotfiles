@@ -10,6 +10,7 @@ alias gl="git log"
 alias gb="git --no-pager branch -v"
 alias vim="nvim"
 alias e="nvim"
+alias otel-patch="evergreen patch --alias required -v windows-compile-suggested -t all"
 
 # Source Nix
 if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then
