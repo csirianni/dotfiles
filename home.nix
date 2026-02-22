@@ -34,6 +34,8 @@
     rustfmt
 
     just
+    fzf
+    fd
   ];
 
   home.file = {
@@ -41,6 +43,14 @@
     ".config/ghostty".source = ./.config/ghostty;
     ".config/nvim".source = ./.config/nvim;
     ".config/yazi".source = ./.config/yazi;
+    ".config/tmux/tmux-sessionizer.sh" = {
+      source = ./.config/tmux/tmux-sessionizer.sh;
+      executable = true;
+    };
+    ".config/tmux/tmux-switch-session.sh" = {
+      source = ./.config/tmux/tmux-switch-session.sh;
+      executable = true;
+    };
   };
 
   programs.bash = {
