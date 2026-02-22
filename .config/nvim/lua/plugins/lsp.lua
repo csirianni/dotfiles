@@ -16,6 +16,10 @@ return {
                 },
             })
 
+            lspconfig.bashls.setup({
+                capabilities = capabilities,
+            })
+
             lspconfig.clangd.setup({
                 cmd = { "/opt/mongodbtoolchain/v5/bin/clangd" },
                 capabilities = capabilities,

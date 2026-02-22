@@ -20,6 +20,7 @@
     clang-tools
 
     lua-language-server
+    bash-language-server
 
     nodejs
     nodePackages.typescript-language-server
