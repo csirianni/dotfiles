@@ -44,4 +44,4 @@ check() {
   echo "\n✓ All checks passed!"
 }
 
-ssh-add --apple-use-keychain ~/.ssh/id_ed25519 2>/dev/null || true
+ssh-add -l &>/dev/null || ssh-add ~/.ssh/id_ed25519 2>/dev/null
