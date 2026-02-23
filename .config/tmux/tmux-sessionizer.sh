@@ -15,21 +15,4 @@ selected="${selected%/}"
 # character. For example, `.config` -> `_config`.
 session_name=$(basename "$selected" | tr . _)
 
-if ! tmux has-session -t="$session_name" 2>/dev/null; then
-    tmux new-session -d -s "$session_name" -c "$selected" -n nvim
-
-    # Start neovim window.
-    tmux send-keys -t "$session_name:nvim" "clear && nvim" C-m
-
-    # Start zsh window.
-    tmux new-window -t "$session_name" -c "$selected"
-    tmux send-keys -t "$session_name:2" "source $HOME/mongo/python3-venv/bin/activate && clear" C-m
-
-    # Start cursor window.
-    tmux new-window -t "$session_name" -c "$selected" -n cursor
-    tmux send-keys -t "$session_name:cursor" "clear && agent" C-m
-
-    tmux select-window -t "$session_name:1"
-fi
-
-tmux switch-client -t "$session_name"
+~/.config/tmux/tmux-create-session.sh "$session_name" "$selected"
