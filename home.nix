@@ -60,6 +60,10 @@
       source = ./.config/tmux/tmux-worktree.sh;
       executable = true;
     };
+    "scripts/test-loop.sh" = {
+      source = ./scripts/test-loop.sh;
+      executable = true;
+    };
   };
 
   programs.bash = {

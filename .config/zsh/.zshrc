@@ -12,6 +12,7 @@ alias vim="nvim"
 alias e="nvim"
 alias otel-patch="evergreen patch --alias required -v windows-compile-suggested -t all"
 alias worktree="~/.config/tmux/tmux-worktree.sh"
+alias test-loop="~/scripts/test-loop.sh"
 
 # Source Nix
 if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then
