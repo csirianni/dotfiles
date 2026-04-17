@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Creates a tmux session with three windows: nvim, shell (with mongo venv), and cursor agent.
+# Creates a tmux session with three windows: nvim, shell (with mongo venv), and an OpenCode agent.
 # Usage: tmux-create-session.sh <session_name> <directory>
 
 set -euo pipefail
@@ -15,8 +15,8 @@ if ! tmux has-session -t "$session_name" 2>/dev/null; then
     tmux new-window -t "$session_name" -c "$directory"
     tmux send-keys -t "$session_name:2" "source $HOME/mongo/python3-venv/bin/activate && clear" C-m
 
-    tmux new-window -t "$session_name" -c "$directory" -n cursor
-    tmux send-keys -t "$session_name:cursor" "clear && agent" C-m
+    tmux new-window -t "$session_name" -c "$directory" -n opencode
+    tmux send-keys -t "$session_name:opencode" "clear && opencode" C-m
 
     tmux select-window -t "$session_name:1"
 fi
