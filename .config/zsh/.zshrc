@@ -13,6 +13,13 @@ alias e="nvim"
 alias otel-patch="evergreen patch --alias required -v windows-compile-suggested -t all"
 alias worktree="~/.config/tmux/tmux-worktree.sh"
 alias test-loop="~/scripts/test-loop.sh"
+alias bt="~/employees/home/cedric.sirianni/backtrace.sh"
+alias cleanup="~/employees/home/cedric.sirianni/cleanup_worktree.sh"
+
+# grpcurl (for disagg)
+export PATH=$PATH:/home/cedric/.ds_toolchain/grpcurl/bin
+
+export PATH="/home/cedric/.opencode/bin:$PATH"
 
 # Source Nix
 if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then
@@ -46,3 +53,7 @@ check() {
 }
 
 ssh-add -l &>/dev/null || ssh-add ~/.ssh/id_ed25519 2>/dev/null
+
+if [ -f ~/.env_keys ]; then
+   source ~/.env_keys
+fi
