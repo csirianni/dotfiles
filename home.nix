@@ -87,6 +87,6 @@
       theme = "robbyrussell";
       plugins = [ "git" ];
     };
-    initExtra = builtins.readFile ./.config/zsh/.zshrc;
+    initContent = builtins.readFile ./.config/zsh/.zshrc;
 };
 }
