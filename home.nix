@@ -19,6 +19,8 @@
     gcc
     clang-tools
 
+    tree-sitter
+
     lua-language-server
     bash-language-server
 
@@ -43,7 +45,7 @@
   home.file = {
     ".tmux.conf".source = ./.config/tmux/.tmux.conf;
     ".config/ghostty".source = ./.config/ghostty;
-    ".config/nvim".source = ./.config/nvim;
+    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/cedric/dotfiles/.config/nvim";
     ".config/yazi".source = ./.config/yazi;
     ".config/tmux/tmux-create-session.sh" = {
       source = ./.config/tmux/tmux-create-session.sh;
