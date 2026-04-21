@@ -37,6 +37,7 @@
     just
     fzf
     fd
+    jq
   ];
 
   home.file = {
