@@ -32,7 +32,7 @@ experimental-features = nix-command flakes
 EOF
 
 header "Applying Home Manager configuration"
-nix run home-manager/master -- switch --flake .
+nix run home-manager/master -- switch --flake . -b backup
 
 header "Setup complete"
 sub "Restart your terminal to begin using the config"
