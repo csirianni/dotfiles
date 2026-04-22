@@ -45,6 +45,8 @@
   home.file = {
     ".tmux.conf".source = ./.config/tmux/.tmux.conf;
     ".config/ghostty".source = ./.config/ghostty;
+    # Neovim plugins are managed by vim.pack, not nix. Symlink to the neovim config directory to
+    # allow vim.pack to manage package versioning through .config/nvim/nvim-package-lock.json.
     ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/cedric/dotfiles/.config/nvim";
     ".config/yazi".source = ./.config/yazi;
     ".config/tmux/tmux-create-session.sh" = {
