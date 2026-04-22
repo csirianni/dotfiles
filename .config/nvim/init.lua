@@ -24,7 +24,6 @@ vim.pack.add({
     "https://github.com/nvim-lualine/lualine.nvim",
     "https://github.com/petertriho/nvim-scrollbar",
     "https://github.com/folke/todo-comments.nvim",
-    "https://github.com/lervag/vimtex",
     "https://github.com/mikavilpas/yazi.nvim",
 })
 
@@ -43,7 +42,6 @@ require("plugins.comment")
 require("plugins.lualine")
 require("plugins.scrollbar")
 require("plugins.todo")
-require("plugins.vimtex")
 require("plugins.yazi")
 
 require("settings")
