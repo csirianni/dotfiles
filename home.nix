@@ -30,16 +30,29 @@
 
     pyright
     ruff
+    uv
 
     rustc
     cargo
     rust-analyzer
     rustfmt
+    clippy
+
+    javaPackages.compiler.openjdk17
+
+    ruby
+
+    graphviz
+    gnuplot
 
     just
     fzf
     fd
     jq
+    htop
+
+    jira-cli-go
+    mongodb-atlas-cli
   ];
 
   home.file = {
