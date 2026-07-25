@@ -4,6 +4,7 @@ vim.pack.add({
     "https://github.com/sainnhe/sonokai",
     "https://github.com/nvim-tree/nvim-web-devicons",
     "https://github.com/nvim-treesitter/nvim-treesitter",
+    "https://github.com/nvim-treesitter/nvim-treesitter-context",
     "https://github.com/neovim/nvim-lspconfig",
     "https://github.com/ray-x/lsp_signature.nvim",
     "https://github.com/hrsh7th/nvim-cmp",
