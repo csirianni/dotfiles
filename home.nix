@@ -37,6 +37,7 @@
     rust-analyzer
     rustfmt
     clippy
+    gdb
 
     javaPackages.compiler.openjdk17
 
