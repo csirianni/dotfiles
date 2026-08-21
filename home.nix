@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, herdr, ... }:
 
 {
   programs.home-manager.enable = true;
@@ -53,6 +53,9 @@
 
     jira-cli-go
     mongodb-atlas-cli
+
+  ] ++ [
+    herdr
   ];
 
   home.file = {
@@ -62,6 +65,7 @@
     # allow vim.pack to manage package versioning through .config/nvim/nvim-package-lock.json.
     ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/cedric/dotfiles/.config/nvim";
     ".config/yazi".source = ./.config/yazi;
+    ".config/herdr/config.toml".source = ./.config/herdr/config.toml;
     ".config/tmux/tmux-create-session.sh" = {
       source = ./.config/tmux/tmux-create-session.sh;
       executable = true;
