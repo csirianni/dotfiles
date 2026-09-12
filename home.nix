@@ -54,6 +54,8 @@
 
     jira-cli-go
     mongodb-atlas-cli
+
+    tree
   ];
 
   home.file = {
