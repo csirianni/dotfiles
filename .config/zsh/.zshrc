@@ -42,6 +42,9 @@ check() {
   
   echo "\nChecking CODEOWNERS errors..."
   bazel run codeowners
+
+  echo "\nLinting..."
+  bazel run lint --fix
   
   echo "\nChecking format..."
   if ! bazel run format; then
