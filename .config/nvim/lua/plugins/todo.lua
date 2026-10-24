@@ -12,7 +12,7 @@ require("todo-comments").setup({
         },
     },
     search = {
-        pattern = [[\b(KEYWORDS)(\s*\([A-Z]+-\d+\)\s*:|\s+[A-Z]+-\d+\s*:|\s*):]],
+        pattern = [[\b(KEYWORDS)(\s*\([A-Z]+-\d+\)|\s+[A-Z]+-\d+)?\s*:]],
     },
 })
 
