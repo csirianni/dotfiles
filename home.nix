@@ -42,6 +42,8 @@
     javaPackages.compiler.openjdk17
 
     ruby
+    hugo
+    dig
 
     graphviz
     gnuplot
